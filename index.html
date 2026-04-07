@@ -6,185 +6,113 @@
     <title>Atrixy Client | Professional Minecraft Launcher</title>
     <style>
         :root {
-            --primary-bg: #0b0e11;
-            --accent-teal: #4fd1c5;
+            --bg-dark: #0b0e11;
+            --teal-accent: #4fd1c5;
             --card-bg: #1a202c;
-            --text-main: #ffffff;
-            --text-dim: #a0aec0;
+            --text-white: #ffffff;
+            --text-grey: #a0aec0;
         }
 
         body {
             margin: 0;
             padding: 0;
-            background-color: var(--primary-bg);
-            color: var(--text-main);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-white);
+            font-family: 'Segoe UI', Arial, sans-serif;
             text-align: center;
         }
 
-        /* Top Navbar */
+        /* Navbar Section */
         nav {
-            background-color: var(--primary-bg);
-            padding: 20px;
-            border-bottom: 2px solid var(--accent-teal);
+            background-color: var(--bg-dark);
+            padding: 25px;
+            border-bottom: 2px solid var(--teal-accent);
         }
 
-        .nav-logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: var(--accent-teal);
-            letter-spacing: 2px;
+        .nav-title {
+            font-size: 26px;
+            font-weight: 800;
+            color: var(--teal-accent);
             text-transform: uppercase;
+            letter-spacing: 3px;
         }
 
-        /* Hero Section with Background Image Effect */
+        /* Hero Banner */
         .hero {
-            background: linear-gradient(rgba(11, 14, 17, 0.7), rgba(11, 14, 17, 0.7)), 
-                        url('https://images.unsplash.com/photo-1627398242454-45a1465c2479?q=80&w=1000&auto=format&fit=crop'); /* Placeholder for your colorful background */
-            background-size: cover;
-            background-position: center;
-            padding: 100px 20px;
+            /* Colorful blurred background pattern like your screenshot */
+            background: radial-gradient(circle at 20% 30%, #ff005533 0%, transparent 40%),
+                        radial-gradient(circle at 80% 70%, #00d2ff33 0%, transparent 40%),
+                        radial-gradient(circle at 50% 50%, #7dff0022 0%, transparent 50%),
+                        var(--bg-dark);
+            padding: 120px 20px;
         }
 
         h1 {
-            font-size: 60px;
+            font-size: clamp(40px, 8vw, 70px);
             margin: 0;
-            color: var(--accent-teal);
-            font-weight: 800;
+            color: var(--teal-accent);
+            font-weight: 900;
         }
 
         .hero p {
-            font-size: 18px;
-            color: var(--text-main);
-            margin: 20px 0;
+            font-size: 20px;
+            margin: 25px 0;
+            font-weight: 400;
             opacity: 0.9;
         }
 
-        .btn-download {
-            background-color: #2c7a7b;
+        .download-button {
+            background-color: #285e61;
             color: white;
-            padding: 15px 40px;
-            border-radius: 8px;
+            padding: 18px 50px;
+            border-radius: 10px;
             text-decoration: none;
-            font-size: 20px;
+            font-size: 22px;
             font-weight: bold;
             display: inline-block;
-            transition: 0.3s;
-            border: 1px solid var(--accent-teal);
+            transition: all 0.3s ease;
+            border: 2px solid var(--teal-accent);
         }
 
-        .btn-download:hover {
-            background-color: var(--accent-teal);
-            color: var(--primary-bg);
-            transform: scale(1.05);
+        .download-button:hover {
+            background-color: var(--teal-accent);
+            color: var(--bg-dark);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(79, 209, 197, 0.3);
         }
 
-        /* Experience Section */
-        .experience {
+        /* UI Preview Section */
+        .preview-section {
             padding: 80px 20px;
-            background-color: var(--primary-bg);
         }
 
-        .experience h2 {
-            font-size: 36px;
-            margin-bottom: 40px;
+        h2 {
+            font-size: 40px;
+            margin-bottom: 50px;
+            font-weight: 700;
         }
 
-        .ui-preview-box {
-            background: #111;
-            width: 80%;
-            max-width: 800px;
-            height: 300px;
+        .ui-box {
+            width: 90%;
+            max-width: 900px;
+            height: 400px;
             margin: 0 auto;
-            border-radius: 15px;
+            background: #111;
+            border-radius: 20px;
+            border: 1px solid #333;
             display: flex;
             align-items: center;
             justify-content: center;
-            border: 1px solid #333;
-            box-shadow: 0 0 30px rgba(79, 209, 197, 0.1);
+            box-shadow: 0 0 50px rgba(0,0,0,0.5);
+            overflow: hidden;
         }
 
-        /* Features Grid */
-        .features-grid {
+        .ui-box img {
+            width: 100%;
+            height: auto;
+            opacity: 0.6;
+        }
+
+        /* Features Cards */
+        .features {
             display: flex;
-            justify-content: center;
-            gap: 20px;
-            padding: 50px 10%;
-            flex-wrap: wrap;
-        }
-
-        .feature-card {
-            background-color: var(--card-bg);
-            padding: 30px;
-            border-radius: 12px;
-            width: 300px;
-            text-align: center;
-            transition: 0.3s;
-        }
-
-        .feature-card:hover {
-            transform: translateY(-10px);
-        }
-
-        .feature-card h3 {
-            color: var(--accent-teal);
-            margin-top: 0;
-        }
-
-        .feature-card p {
-            color: var(--text-dim);
-            font-size: 14px;
-            line-height: 1.6;
-        }
-
-        footer {
-            padding: 40px;
-            opacity: 0.5;
-            font-size: 14px;
-        }
-    </style>
-</head>
-<body>
-
-    <nav>
-        <div class="nav-logo">ATRIXY CLIENT</div>
-    </nav>
-
-    <header class="hero">
-        <h1>Next-Gen Launcher</h1>
-        <p>Built for performance. Made for players.</p>
-        <a href="https://github.com/AtrixyClient/AtrixyClient-site/releases/download/Atrixyclient/AtrixyClient.exe" class="btn-download">
-            Download Atrixy Client
-        </a>
-    </header>
-
-    <section class="experience">
-        <h2>Experience the UI</h2>
-        <div class="ui-preview-box">
-            <p style="color: #444;">[ Atrixy Client Version Manager Image ]</p>
-            </div>
-    </section>
-
-    <div class="features-grid">
-        <div class="feature-card">
-            <h3>Version Manager</h3>
-            <p>Install and play any Minecraft version with a single click. Fast and easy.</p>
-        </div>
-
-        <div class="feature-card">
-            <h3>RAM Controller</h3>
-            <p>Easy slider to allocate exactly how much memory you want the client to use.</p>
-        </div>
-
-        <div class="feature-card">
-            <h3>Optimized Code</h3>
-            <p>Zero bloatware. Just pure speed and maximum FPS for your gaming sessions.</p>
-        </div>
-    </div>
-
-    <footer>
-        &copy; 2026 Atrixy Client | Built by Antariksha
-    </footer>
-
-</body>
-</html>
