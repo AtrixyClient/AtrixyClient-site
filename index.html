@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AtrixClient | Riptide Network</title>
+    <title>Atrixy Client | Next-Gen Launcher</title>
     <style>
         :root {
             --bg: #050a0f;
             --card-bg: #0d1621;
-            --accent: #00d2ff;
+            --accent: #4fd1c5; /* Teal color like your screenshot */
             --text: #e0f2f1;
-            --secondary: #3a7bd5;
+            --secondary: #2c7a7b;
         }
 
         body {
@@ -25,42 +25,47 @@
 
         /* Hero Section */
         header {
-            height: 60vh;
+            height: 65vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            background: radial-gradient(circle at center, #1a2a6c, #050a0f);
+            /* Added glow effect in background */
+            background: radial-gradient(circle at center, #112a36, #050a0f);
             width: 100%;
         }
 
         h1 {
-            font-size: 4rem;
+            font-size: 4.5rem;
             margin: 0;
             text-transform: uppercase;
             letter-spacing: 5px;
-            background: linear-gradient(to right, var(--accent), var(--secondary));
+            background: linear-gradient(to bottom, #ffffff, var(--accent));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            filter: drop-shadow(0 0 10px rgba(0, 210, 255, 0.5));
+            filter: drop-shadow(0 0 15px rgba(79, 209, 197, 0.3));
         }
 
         .download-btn {
-            margin-top: 30px;
-            padding: 15px 40px;
-            background: var(--accent);
-            color: var(--bg);
+            margin-top: 35px;
+            padding: 18px 50px;
+            background: var(--secondary);
+            color: white;
             text-decoration: none;
             font-weight: bold;
-            border-radius: 50px;
+            font-size: 1.2rem;
+            border-radius: 10px;
+            border: 2px solid var(--accent);
             transition: 0.3s;
-            box-shadow: 0 0 20px rgba(0, 210, 255, 0.4);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
         }
 
         .download-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 30px var(--accent);
+            background: var(--accent);
+            color: var(--bg);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px var(--accent);
         }
 
         /* Bento Grid Layout */
@@ -68,75 +73,74 @@
             max-width: 1000px;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-            padding: 50px 20px;
+            gap: 25px;
+            padding: 60px 20px;
         }
 
         .card {
             background: var(--card-bg);
-            padding: 25px;
+            padding: 30px;
             border-radius: 20px;
             border: 1px solid rgba(255, 255, 255, 0.05);
-            transition: 0.3s;
+            transition: 0.4s;
         }
 
-        .card:hover { border-color: var(--accent); }
+        .card:hover { 
+            border-color: var(--accent);
+            transform: scale(1.02);
+        }
 
         .tall { grid-row: span 2; }
         .wide { grid-column: span 2; }
 
-        .card h3 { color: var(--accent); margin-top: 0; }
-        
-        .status-dot {
-            height: 10px; width: 100px;
-            background: #00ff88;
-            display: inline-block;
-            border-radius: 5px;
-            margin-left: 10px;
-        }
+        .card h3 { color: var(--accent); margin-top: 0; font-size: 1.5rem; }
 
-        footer { padding: 40px; font-size: 0.8rem; opacity: 0.6; }
+        footer { padding: 50px; font-size: 0.9rem; opacity: 0.5; }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>ATRIX CLIENT</h1>
-        <p>Built for the Riptide Network Experience</p>
-        <a href="AtrixClient.bat" download class="download-btn">DOWNLOAD v1.0 (.BAT)</a>
+        <h1>ATRIXY CLIENT</h1>
+        <p style="font-size: 1.2rem; opacity: 0.8;">Built for performance. Made for players.</p>
+        
+        <a href="https://github.com/AtrixyClient/AtrixyClient-site/releases/download/Atrixyclient/AtrixyClient.exe" class="download-btn">
+            DOWNLOAD ATRIXY CLIENT (.EXE)
+        </a>
+        <p style="margin-top: 15px; font-size: 0.8rem; opacity: 0.5;">Windows v1.0 | 21.8 MB</p>
     </header>
 
     <div class="container">
         <div class="card wide">
-            <h3>Riptide Network Status</h3>
-            <p>IP: <strong>riptidenetwork.falix.gg</strong></p>
-            <p>Online Players: 12/100 <span class="status-dot"></span></p>
+            <h3>Experience the UI</h3>
+            <p>Clean, minimal, and powerful. Atrixy Client provides the ultimate control over your Minecraft versions and RAM allocation.</p>
         </div>
 
         <div class="card tall">
-            <h3>Why Atrix?</h3>
-            <ul>
+            <h3>Why Atrixy?</h3>
+            <ul style="line-height: 2;">
                 <li>Integrated Vulkan Support</li>
                 <li>Zero Bloatware</li>
-                <li>Custom Riptide HUD</li>
-                <li>Ultra High FPS</li>
+                <li>Ultra High FPS Focus</li>
+                <li>Python Optimized Engine</li>
+                <li>Easy Version Manager</li>
             </ul>
         </div>
 
         <div class="card">
             <h3>Version Info</h3>
-            <p>MC: 1.20.1</p>
-            <p>Build: 042626</p>
+            <p>Minecraft: 1.8 - 1.20.1</p>
+            <p>Build Status: Stable</p>
         </div>
 
         <div class="card">
             <h3>Community</h3>
-            <p>Join our Discord for support and events.</p>
+            <p>Stay updated with the latest builds and performance patches.</p>
         </div>
     </div>
 
     <footer>
-        &copy; 2026 AtrixClient | Developed by Antariksha
+        &copy; 2026 Atrixy Client | Developed by Antariksha
     </footer>
 
 </body>
