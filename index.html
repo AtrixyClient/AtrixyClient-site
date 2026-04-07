@@ -3,116 +3,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atrixy Client | Professional Minecraft Launcher</title>
+    <title>AtrixClient | Riptide Network</title>
     <style>
         :root {
-            --bg-dark: #0b0e11;
-            --teal-accent: #4fd1c5;
-            --card-bg: #1a202c;
-            --text-white: #ffffff;
-            --text-grey: #a0aec0;
+            --bg: #050a0f;
+            --card-bg: #0d1621;
+            --accent: #00d2ff;
+            --text: #e0f2f1;
+            --secondary: #3a7bd5;
         }
 
         body {
+            background-color: var(--bg);
+            color: var(--text);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: var(--bg-dark);
-            color: var(--text-white);
-            font-family: 'Segoe UI', Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Hero Section */
+        header {
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
             text-align: center;
-        }
-
-        /* Navbar Section */
-        nav {
-            background-color: var(--bg-dark);
-            padding: 25px;
-            border-bottom: 2px solid var(--teal-accent);
-        }
-
-        .nav-title {
-            font-size: 26px;
-            font-weight: 800;
-            color: var(--teal-accent);
-            text-transform: uppercase;
-            letter-spacing: 3px;
-        }
-
-        /* Hero Banner */
-        .hero {
-            /* Colorful blurred background pattern like your screenshot */
-            background: radial-gradient(circle at 20% 30%, #ff005533 0%, transparent 40%),
-                        radial-gradient(circle at 80% 70%, #00d2ff33 0%, transparent 40%),
-                        radial-gradient(circle at 50% 50%, #7dff0022 0%, transparent 50%),
-                        var(--bg-dark);
-            padding: 120px 20px;
+            background: radial-gradient(circle at center, #1a2a6c, #050a0f);
+            width: 100%;
         }
 
         h1 {
-            font-size: clamp(40px, 8vw, 70px);
+            font-size: 4rem;
             margin: 0;
-            color: var(--teal-accent);
-            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            background: linear-gradient(to right, var(--accent), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            filter: drop-shadow(0 0 10px rgba(0, 210, 255, 0.5));
         }
 
-        .hero p {
-            font-size: 20px;
-            margin: 25px 0;
-            font-weight: 400;
-            opacity: 0.9;
-        }
-
-        .download-button {
-            background-color: #285e61;
-            color: white;
-            padding: 18px 50px;
-            border-radius: 10px;
+        .download-btn {
+            margin-top: 30px;
+            padding: 15px 40px;
+            background: var(--accent);
+            color: var(--bg);
             text-decoration: none;
-            font-size: 22px;
             font-weight: bold;
-            display: inline-block;
-            transition: all 0.3s ease;
-            border: 2px solid var(--teal-accent);
+            border-radius: 50px;
+            transition: 0.3s;
+            box-shadow: 0 0 20px rgba(0, 210, 255, 0.4);
         }
 
-        .download-button:hover {
-            background-color: var(--teal-accent);
-            color: var(--bg-dark);
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(79, 209, 197, 0.3);
+        .download-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px var(--accent);
         }
 
-        /* UI Preview Section */
-        .preview-section {
-            padding: 80px 20px;
+        /* Bento Grid Layout */
+        .container {
+            max-width: 1000px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 50px 20px;
         }
 
-        h2 {
-            font-size: 40px;
-            margin-bottom: 50px;
-            font-weight: 700;
-        }
-
-        .ui-box {
-            width: 90%;
-            max-width: 900px;
-            height: 400px;
-            margin: 0 auto;
-            background: #111;
+        .card {
+            background: var(--card-bg);
+            padding: 25px;
             border-radius: 20px;
-            border: 1px solid #333;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 0 50px rgba(0,0,0,0.5);
-            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: 0.3s;
         }
 
-        .ui-box img {
-            width: 100%;
-            height: auto;
-            opacity: 0.6;
+        .card:hover { border-color: var(--accent); }
+
+        .tall { grid-row: span 2; }
+        .wide { grid-column: span 2; }
+
+        .card h3 { color: var(--accent); margin-top: 0; }
+        
+        .status-dot {
+            height: 10px; width: 100px;
+            background: #00ff88;
+            display: inline-block;
+            border-radius: 5px;
+            margin-left: 10px;
         }
 
-        /* Features Cards */
-        .features {
-            display: flex;
+        footer { padding: 40px; font-size: 0.8rem; opacity: 0.6; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>ATRIX CLIENT</h1>
+        <p>Built for the Riptide Network Experience</p>
+        <a href="AtrixClient.bat" download class="download-btn">DOWNLOAD v1.0 (.BAT)</a>
+    </header>
+
+    <div class="container">
+        <div class="card wide">
+            <h3>Riptide Network Status</h3>
+            <p>IP: <strong>riptidenetwork.falix.gg</strong></p>
+            <p>Online Players: 12/100 <span class="status-dot"></span></p>
+        </div>
+
+        <div class="card tall">
+            <h3>Why Atrix?</h3>
+            <ul>
+                <li>Integrated Vulkan Support</li>
+                <li>Zero Bloatware</li>
+                <li>Custom Riptide HUD</li>
+                <li>Ultra High FPS</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Version Info</h3>
+            <p>MC: 1.20.1</p>
+            <p>Build: 042626</p>
+        </div>
+
+        <div class="card">
+            <h3>Community</h3>
+            <p>Join our Discord for support and events.</p>
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2026 AtrixClient | Developed by Antariksha
+    </footer>
+
+</body>
+</html>
