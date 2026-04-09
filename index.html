@@ -3,62 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Atrixy Client | High Performance</title>
+    <title>Atrixy Client | Official</title>
     <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #0a0a0a;
-            color: white;
-            text-align: center;
-        }
-        .container {
-            height: 100vh;
+            background-color: #080808;
+            color: #ffffff;
+            font-family: 'Segoe UI', sans-serif;
             display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: radial-gradient(circle, #1a1a1a 0%, #000 100%);
+            height: 100vh;
+        }
+        .container {
+            text-align: center;
+            padding: 40px;
+            border: 1px solid #1a1a1a;
+            border-radius: 20px;
+            background: #0d0d0d;
+            box-shadow: 0 15px 50px rgba(0,0,0,0.8);
         }
         h1 {
-            font-size: 4rem;
+            font-size: 3.5rem;
+            color: #00f2ff;
             margin-bottom: 10px;
-            color: #00FFFF;
-            text-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
-        }
-        p {
-            font-size: 1.2rem;
-            color: #ccc;
-            margin-bottom: 30px;
-        }
-        .download-card {
-            background: #111;
-            padding: 40px;
-            border-radius: 15px;
-            border: 1px solid #222;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            font-weight: 800;
         }
         .btn {
-            background: #00FFFF;
-            color: #000;
-            padding: 15px 40px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.5rem;
-            border-radius: 8px;
             display: inline-block;
-            transition: transform 0.2s, background 0.2s;
+            background-color: #00f2ff;
+            color: #000;
+            padding: 20px 60px;
+            font-size: 1.5rem;
+            font-weight: 900;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-transform: uppercase;
+            margin-top: 20px;
         }
         .btn:hover {
             transform: scale(1.05);
-            background: #00cccc;
-            box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
-        }
-        .footer {
-            margin-top: 20px;
-            font-size: 0.9rem;
-            color: #555;
+            background-color: #ffffff;
+            box-shadow: 0 0 25px rgba(0, 242, 255, 0.6);
         }
     </style>
 </head>
@@ -66,20 +53,11 @@
 
     <div class="container">
         <h1>ATRIXY CLIENT</h1>
-        <p>The Ultimate Minecraft 1.21 Experience. More FPS. Better UI.</p>
+        <p style="color: #888;">The next generation of Minecraft.</p>
 
-        <div class="download-card">
-            <a href="AtrixyClient.exe" download="AtrixyClient.exe" class="btn">
-                DOWNLOAD NOW
-            </a>
-            <p style="font-size: 0.8rem; margin-top: 15px; color: #666;">
-                Version 1.0.0 | Supports Fabric 1.21+
-            </p>
-        </div>
-
-        <div class="footer">
-            &copy; 2026 Atrixy Client Network. Not affiliated with Mojang AB.
-        </div>
+        <a href="AtrixyClient.exe" download="AtrixyClient.exe" class="btn">
+            DOWNLOAD
+        </a>
     </div>
 
 </body>
